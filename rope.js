@@ -7,8 +7,8 @@ class Rope{
             bodyA: bodyA,
             bodyB: bodyB,
             pointB:{x:this.offsetX, y:this.offsetY},
-            length: 10,
-            stiffness: 0.04,
+            //length: 10,
+            //stiffness: 0.04,
         }
 
         this.rope= Constraint.create(opt);
@@ -17,10 +17,10 @@ class Rope{
     display() {
         var pointA= this.rope.bodyA.position;
         var pointB= this.rope.bodyB.position;
-        
+        push();
         strokeWeight(3);
-        stroke(color(244, 244, 244));
-        line(poinyA.x, pointA.y-50, pointB.x-this.offsetX, pointB.y+this.offsetY);
-      
+        stroke(color(0));
+        line(pointA.x, pointA.y-50, pointB.x+this.offsetX, pointB.y+this.offsetY);
+        pop();
     }
 }
