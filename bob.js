@@ -12,8 +12,8 @@ class Bob {
        this.x = x;
        this.y = y;
        this.r = 2*r;
-       
-     this.body = Bodies.circle(this.x, this.y, this.r, options);
+
+     this.body = Bodies.circle(x, y, r, options);
      World.add(world, this.body);
 
     }
@@ -25,4 +25,3 @@ class Bob {
 
     }
 }
-
